@@ -16,18 +16,18 @@
   /* qgd = qugodev = quintero gordo developer */
 
   /* COLORS */
-  --qgd-color-1: #1d1d1d;
-  --qgd-color-2: #e6e6e6;
-  --qgd-color-3: #5c5c5c;
-  --qgd-color-4: #ffffff;
+  --qgd-color-1: #3f8d86;
+  --qgd-color-2: #c1c0bc;
+  --qgd-color-3: #030b29;
+  --qgd-color-4: #8d8d8d;
   --qgd-color-5: #f50000;
 
   
   
 
   /* BACKGROUNDS */
-  --qgd-primary-background:var(--qgd-color-50);
-  --qgd-secondary-background:var(--qgd-color-15);
+  --qgd-primary-background:var(--qgd-color-1);
+  --qgd-secondary-background:var(--qgd-color-2);
 
 
   /* TEXTS */
@@ -61,3 +61,15 @@
   --qgd-border-radius-2: 100%
 
 }
+
+body{
+  background-color: var(--qgd-primary-background);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 9vh;
+
+}
+
