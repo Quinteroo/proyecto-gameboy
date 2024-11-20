@@ -1,0 +1,19 @@
+footer{
+  width: 100%;
+  height: 15vh;
+  position: relative;
+}
+
+.altavoz{
+  width: 120px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+.phones{
+  width: 50px;
+  position: absolute;
+  bottom: 0px;
+  right: 48%;
+}

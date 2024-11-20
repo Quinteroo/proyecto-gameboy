@@ -1,0 +1,14 @@
+.cross-div{
+  width: 110px;
+  height: 110px;
+  overflow: hidden;
+  object-fit:cover;
+  object-position: center;
+
+
+}
+
+.cross-div > img{
+  width: 100%;
+  height: 100%;
+}
