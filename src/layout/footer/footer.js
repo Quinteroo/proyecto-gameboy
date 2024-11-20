@@ -1,3 +1,4 @@
+import { options } from "../../components/options/options"
 import "./footer.css"
 
 
@@ -23,6 +24,8 @@ export const footer = () => {
   footer.appendChild(phones)
   footer.appendChild(altavoz)
   gameBoy.appendChild(footer)
+
+  options()
 
 
 }

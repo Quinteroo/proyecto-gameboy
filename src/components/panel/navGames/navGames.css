@@ -1,0 +1,39 @@
+nav{
+  width: 45%;
+  height: 50px;
+  background-color: var(--qgd-color-10);
+  padding: 5px;
+  border-radius: 50px;
+  transform: rotate(-20deg)
+
+}
+
+.games-ul{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.games-ul > li{
+  width: 30%;
+  height: 100%;
+}
+
+.games-ul > li > button{
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 0px;
+  background-color: var(--qgd-color-8);
+  color: var(--qgd-color-9);
+  cursor:pointer;
+}
+
+.games-ul > li > button:active{
+  border: 4px solid var(--qgd-color-8);
+  background-color: #6b083f;
+}
