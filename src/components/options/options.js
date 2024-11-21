@@ -1,3 +1,4 @@
+import { home } from "../../pages/home/home"
 import "./options.css"
 
 export const options = () => {
@@ -20,6 +21,7 @@ export const options = () => {
 
   const liStart = document.createElement("li")
   const aStart = document.createElement("a")
+  aStart.addEventListener("click", () => home())
   const pStart = document.createElement("p")
   pStart.textContent = "START"
 

@@ -1,0 +1,25 @@
+.home{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  gap: 15px;
+}
+.home > h2, .home > ul > li {
+  color: yellow;
+}
+
+.home > ul > li:nth-child(1) {
+  text-align: center;
+}
+
+.home > ul > li {
+  text-align: left;
+}
+
+.inicio{
+  font-size: x-small;
+  font-weight: 300;
+}
+

@@ -1,3 +1,4 @@
+import { whac } from "../../../pages/whac/whac"
 import "./navGames.css"
 
 
@@ -16,7 +17,7 @@ export const navGames = () => {
   const gameA = document.createElement("button")
   gameA.classList.add("game-a")
   gameA.textContent = "A"
-  gameA.addEventListener("click", () => console.log("hola desde botón A"))
+  gameA.addEventListener("click", () => whac())
 
   const gameB = document.createElement("button")
   gameB.classList.add("game-b")
