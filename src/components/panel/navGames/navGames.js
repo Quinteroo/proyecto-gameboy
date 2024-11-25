@@ -1,5 +1,7 @@
-import { whac } from "../../../pages/whac/whac"
+import { whac } from "../../../pages/whac/whac.js"
+import { ticTacToe } from "../../../pages/ticTacToe/ticTacToe.js"
 import "./navGames.css"
+import { scissor } from "../../../pages/scissor/scissor.js"
 
 
 export const navGames = () => {
@@ -17,18 +19,18 @@ export const navGames = () => {
   const gameA = document.createElement("button")
   gameA.classList.add("game-a")
   gameA.textContent = "A"
-  gameA.addEventListener("click", () => whac())
+  gameA.addEventListener("click", () => ticTacToe())
 
   const gameB = document.createElement("button")
   gameB.classList.add("game-b")
   gameB.textContent = "B"
-  gameB.addEventListener("click", () => console.log("hola desde botón B"))
+  gameB.addEventListener("click", () => scissor())
 
 
   const gameC = document.createElement("button")
   gameC.classList.add("game-c")
   gameC.textContent = "C"
-  gameC.addEventListener("click", () => console.log("hola desde botón C"))
+  gameC.addEventListener("click", () => whac())
 
 
   liA.appendChild(gameA)

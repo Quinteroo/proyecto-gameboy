@@ -9,9 +9,9 @@ export const home = () => {
   <h2 class="title">Escoja juego!</h2>
   <ul>
     <li>👾 🕹️ 🐉</li>
-    <li class="game-name">A > whac a mole</li>
-    <li class="game-name">B > tres en raya</li>
-    <li class="game-name">C > pieda, papel, tijera</li>
+    <li class="game-name">A > tres en raya</li>
+    <li class="game-name">B > pieda, papel, tijera</li>
+    <li class="game-name">C > whac a mole</li>
     <li class="inicio">start > pantalla inicio</li>
   </ul>
   </div>

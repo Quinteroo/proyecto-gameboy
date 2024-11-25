@@ -1,0 +1,44 @@
+.score{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.score > div{
+  width: 50%;
+}
+
+.score > div > p{
+  text-align: center;
+}
+.score > div> p:nth-child(1){
+  font-weight: 800;
+  color: yellow;
+}
+
+.result{
+  width: 100%;
+  position: absolute;
+  bottom: 50%;
+}
+.result > p{
+  text-align: center;
+}
+
+.playerChoose{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: absolute;
+  bottom: 0px;
+}
+
+.playerChoose > div{
+  width: 33%;
+  cursor: pointer;
+}
+
+.playerChoose >div > p{
+  text-align: center;
+}
