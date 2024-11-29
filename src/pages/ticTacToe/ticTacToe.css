@@ -1,5 +1,17 @@
+
+.score > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5px;
+}
+
+.score > div> p{
+  font-size: small;
+}
+
 .tablero{
-  margin: 20px 0 0 37px;
+  margin: 5px 0 0 37px;
   width: 150px;
   height: 150px;
   display: flex;

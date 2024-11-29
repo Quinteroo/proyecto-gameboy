@@ -1,13 +1,26 @@
-import "./ticTacToe.css"
+import { clearWhac } from "../whac/whac";
+import "./ticTacToe.css";
 
 export const ticTacToe = () => {
+  clearWhac()
   const screen = document.querySelector('.screen');
+
+  let player1Score = parseInt(localStorage.getItem("player1ScoreScissor")) || 0;
+  let player2Score = parseInt(localStorage.getItem("player2ScoreScissor")) || 0;
 
   screen.innerHTML = "";
 
-
   screen.innerHTML = `
-
+      <div class="score">
+      <div>
+        <p>Player 1</p>
+        <p class="player1-score">${player1Score}</p>
+      </div>
+      <div>
+        <p>Player 2</p>
+        <p class="player2-score">${player2Score}</p>
+      </div>
+    </div>
     <div class="tablero">
       <div class="square" id="1"></div>
       <div class="square" id="2"></div>
@@ -19,11 +32,20 @@ export const ticTacToe = () => {
       <div class="square" id="8"></div>
       <div class="square" id="9"></div>
     </div>
-  `
+  `;
 
-  let player1 = true
+  let player1 = true;
 
-  const squares = document.querySelectorAll(".square")
+  const squares = document.querySelectorAll(".square");
+  const player1ScoreElement = document.querySelector(".player1-score");
+  const player2ScoreElement = document.querySelector(".player2-score");
+
+  function updateScores() {
+    player1ScoreElement.textContent = player1Score;
+    player2ScoreElement.textContent = player2Score;
+    localStorage.setItem("player1ScoreScissor", player1Score);
+    localStorage.setItem("player2ScoreScissor", player2Score);
+  }
 
   function win() {
     const Combos = [
@@ -45,6 +67,12 @@ export const ticTacToe = () => {
 
       if (squareA && squareA === squareB && squareA === squareC) {
         alert(`¡El jugador ${squareA} gana! 🎉🎊`);
+        if (squareA === "X") {
+          player1Score += 1
+        } else {
+          player2Score += 1
+        }
+        updateScores()
         resetGame();
         return true;
       }
@@ -52,19 +80,23 @@ export const ticTacToe = () => {
     return false;
   }
 
-
+  function checkDraw() {
+    const isDraw = [...squares].every(square => square.innerHTML !== "");
+    if (isDraw) {
+      alert("¡Es un empate! 🤝");
+      resetGame();
+      return true;
+    }
+    return false;
+  }
 
   function resetGame() {
     squares.forEach((square) => (square.innerHTML = ""));
     player1 = true;
   }
 
-
-
   function markPlayer(event) {
     const squareSelected = event.target;
-    console.log(event);
-
 
     if (squareSelected.innerHTML !== "") {
       alert("❌ Este cuadrado ya está seleccionado");
@@ -79,7 +111,7 @@ export const ticTacToe = () => {
 
     player1 = !player1;
 
-    if (win()) {
+    if (win() || checkDraw()) {
       return;
     }
   }
@@ -88,4 +120,3 @@ export const ticTacToe = () => {
     square.addEventListener("click", markPlayer)
   );
 };
-
